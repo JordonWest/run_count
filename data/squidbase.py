@@ -4,9 +4,9 @@ file_path = f"{os.getcwd()}/data/runs.yaml"
 
 def squidget():
     yaml_file = open(file_path)
-    return (yaml.load(yaml_file, Loader=yaml.FullLoader))['runs']
+    return (yaml.load(yaml_file, Loader=yaml.FullLoader))
 
 def squidwrite(data):
-    with open(file_path, 'w') as run_file:
-        output = yaml.dump(data, file_path)
+    yaml_file = open(file_path, "w")
+    yaml.dump(data, yaml_file, default_flow_style=False)
 

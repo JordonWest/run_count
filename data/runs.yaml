@@ -1,12 +1,13 @@
-
 runs:
-  - distance: 1.33
-    day: 3 
-  - distance: 7.6
-    day: 4
-  - distance: 1.33
-    day: 8
-  - distance: 2.5
-    day: 9
-  - distance: 1.33
-    day: 10
+- day: 3
+  distance: 1.33
+- day: 4
+  distance: 7.6
+- day: 8
+  distance: 1.33
+- day: 9
+  distance: 2.5
+- day: 10
+  distance: 1.33
+- day: 355
+  distance: 23.0

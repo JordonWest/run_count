@@ -1,0 +1,3 @@
+#!/bin/bash
+rm runs.yaml
+cp const.yaml runs.yaml
