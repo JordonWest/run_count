@@ -1,6 +1,7 @@
 import yaml, os, sys
 
-file_path = f"{os.getcwd()}/data/runs.yaml"
+
+file_path = f"{os.getcwd()}/data/dev.yaml" if os.environ['FLASK_ENV'] == 'development' else f"{os.getcwd()}/data/runs.yaml"
 
 def squidget():
     yaml_file = open(file_path)
