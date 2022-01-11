@@ -9,6 +9,7 @@ app.secret_key=b'_5#y2L"F4Q8z\n\xec]/'
 @app.route("/")
 def main():
     runs = squidget()['runs']
+    print(runs)
     total_distance = 0
     for r in runs:
         total_distance += r['distance']
@@ -17,6 +18,10 @@ def main():
 @app.route("/metadata")
 def meta():
     return json.dumps(squidget())
+
+@app.route("/test")
+def test():
+    return render_template('index.html')
 
 @app.route("/post_run", methods=(['POST']))
 def post():

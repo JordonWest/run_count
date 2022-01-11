@@ -1,6 +1,9 @@
-
-<html>
-    <h2>Total = {{total_distance}}</h2>
+{% extends "base.html" %}
+{% block title %}Squid-Counter{% endblock %}
+{% block content %}
+  <div class="w-75 p-1">
+      <div class="fs-1">Total = {{total_distance}}</div>
+  </div>
     </br>
     </br>
     <form action="/post_run" method="POST">
@@ -8,4 +11,4 @@
         <input type="submit" value="Submit">
     </form>
 
-</html>
+{% endblock %}
