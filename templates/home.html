@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Squid-Counter{% endblock %}
 {% block content %}
+    <div class=TopSpacer></div>
     <div class=TopBanner>
       <div class=ProgressBarColor style="width:{{progress_percent}}%"></div>
-      <div class=ProgressBarDisplay">{{total_distance}} of 1000 Miles ran.</div>
+      <div class=ProgressBarDisplay">{{total_distance}} of 1000 Miles</div>
     </div>
+    <div class=PercentFooter>{{percent}}% complete</div>
     </br>
-    <div>{{percent}}% complete</div>
     </br>
     <form action="/post_run" method="POST">
         <input type="text" name="distance">

@@ -1,21 +1,29 @@
+.TopSpacer{
+  height: 40px;
+}
 .TopBanner{
   font-size: 90px;
+  text-align: center;
   width:100%;
   height: auto;
   justify-content: space-between;
-  background-color: grey;
   position: relative;
 }
 
 .ProgressBarColor{
   background-color: green;
-  width: 100px;
   height: 100%;
-  position: absolute;
   z-index: 2;
   opacity: 0.5;
+  position: absolute;
 }
 
 .ProgressBarDisplay{
   margin: auto;
+}
+
+.PercentFooter{
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
 }
