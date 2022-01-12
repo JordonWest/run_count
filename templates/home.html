@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Squid-Counter{% endblock %}
 {% block content %}
+  <div class=Content>
     <div class=ProgressBanner>
       <div>
         <div class=ProgressBarColor style="width:{{percent}}%"></div>
@@ -8,11 +9,36 @@
       </div>
       <div class=PercentFooter>{{percent}}% complete</div>
     </div>
+    <div class=FillSpacer></div>
     <div class=FormBox>
+      <button class=open-button" onclick="openForm()">New Run</button>
+      <div class="form-popup" id="myForm">
+        <form action="/post_run" method="POST" class="form-container">
+          <h1>Distance</h1>
+
+          <input type="text" name="distance">
+
+          <button type="submit" class="btn">Submit Run</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      <!--
       <form action="/post_run" method="POST">
         <input type="text" name="distance">
         <input type="submit" value="Submit">
       </form>
+      -->
     <div>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
 
 {% endblock %}
