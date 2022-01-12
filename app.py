@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    progress_percent = 20
     runs = squidget()['runs']
     total_distance = 0
     for r in runs:
@@ -16,7 +15,7 @@ def main():
                 runs=runs, 
                 total_distance=total_distance, 
                 percent=round(total_distance/1000,2),
-                progress_percent=progress_percent)
+                )
 
 @app.route("/metadata")
 def meta():

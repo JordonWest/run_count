@@ -1,0 +1,8 @@
+.FormBox{
+  height:0;
+  background-color: red;
+  position fixed;
+  bottom 23px;
+  width: auto; 
+  display: table-row;
+}
