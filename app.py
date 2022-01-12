@@ -4,16 +4,19 @@ from datetime import *
 from data.squidbase import squidget, squidwrite
 
 app = Flask(__name__)
-app.secret_key=b'_5#y2L"F4Q8z\n\xec]/'
 
 @app.route("/")
 def main():
+    progress_percent = 20
     runs = squidget()['runs']
-    print(runs)
     total_distance = 0
     for r in runs:
         total_distance += r['distance']
-    return render_template('home.html', runs=runs, total_distance=total_distance)
+    return render_template('home.html',
+                runs=runs, 
+                total_distance=total_distance, 
+                percent=round(total_distance/1000,2),
+                progress_percent=progress_percent)
 
 @app.route("/metadata")
 def meta():
