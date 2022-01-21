@@ -11,13 +11,10 @@
     </div>
     <div class=FillSpacer></div>
     <div class=FormBox>
-      <button class=open-button" onclick="openForm()">New Run</button>
+      <button class="open-button" onclick="openForm()" id="openBtn">New Run</button>
       <div class="form-popup" id="myForm">
         <form action="/post_run" method="POST" class="form-container">
-          <h1>Distance</h1>
-
           <input type="text" name="distance">
-
           <button type="submit" class="btn">Submit Run</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
@@ -34,10 +31,12 @@
   <script>
     function openForm() {
       document.getElementById("myForm").style.display = "block";
+      document.getElementById("openBtn").style.display = "none";
     }
 
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
+      document.getElementById("openBtn").style.display = "block";
     }
   </script>
 

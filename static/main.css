@@ -13,5 +13,6 @@ body {
   height: 40px;
 }
 .FillSpacer{
-  height:1000px;
+  height:400px;
+  background: green;
 }
