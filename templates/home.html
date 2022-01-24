@@ -9,7 +9,10 @@
       </div>
       <div class=PercentFooter>{{percent}}% complete</div>
     </div>
-    <div class=FillSpacer></div>
+    <div class=FillSpacer>
+      <h3>Longest Run = {{longest_run}}</h3>
+      <h3>Last Run = {{last_run['distance']}}</h3>
+    </div>
     <div class=FormBox>
       <button class="open-button" onclick="openForm()" id="openBtn">New Run</button>
       <div class="form-popup" id="myForm">

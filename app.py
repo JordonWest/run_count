@@ -9,12 +9,17 @@ app = Flask(__name__)
 def main():
     runs = squidget()['runs']
     total_distance = 0
+    longest_run = 0
     for r in runs:
         total_distance += r['distance']
+        if r['distance'] > longest_run:
+            longest_run = r['distance']
     percent = round((total_distance/1000 * 100),2)
     return render_template('home.html',
                 runs=runs, 
                 total_distance=round(total_distance,2), 
+                longest_run=longest_run,
+                last_run=runs[-1],
                 percent=percent,
                 )
 
