@@ -19,6 +19,22 @@
         {
             "distance": 1.33,
             "day": 10
+        },
+        {
+            "distance": 1.33,
+            "day": 17
+        },
+        {
+            "distance": 1.33,
+            "day": 18
+        },
+        {
+            "distance": 9.05,
+            "day": 19
+        },
+        {
+            "distance": 1.33,
+            "day": 20
         }
     ]
 }

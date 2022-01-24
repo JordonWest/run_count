@@ -10,7 +10,8 @@
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   font-size: 80px;
   font-family: "Copperplate", "Fantasy";
 }
@@ -29,7 +30,7 @@
   max-width: 100%;
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color: #333;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,9 +40,11 @@
 .form-container input[type=text], .form-container input[type=password] {
   font-size: 80px; 
   width: 50%;
-  padding: 15px;
+  margin-left: 25%;
   border: none;
+  margin-bottom:10px;
   background: #f1f1f1;
+  text-align: center;
 }
 
 /* When the inputs get focus, do something */
@@ -60,6 +63,7 @@
   border: none;
   cursor: pointer;
   width: 50%;
+  margin-left: 25%;
   margin-top:10px;
   margin-bottom:10px;
   opacity: 0.8;
