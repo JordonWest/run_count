@@ -11,10 +11,11 @@ def main():
     total_distance = 0
     for r in runs:
         total_distance += r['distance']
+    percent = round((total_distance/1000 * 100),2)
     return render_template('home.html',
                 runs=runs, 
-                total_distance=total_distance, 
-                percent=round(total_distance/1000,2),
+                total_distance=round(total_distance,2), 
+                percent=percent,
                 )
 
 @app.route("/metadata")
