@@ -40,7 +40,7 @@ def post():
     except:
         return "not a valid float"
     run = {"distance": float(distance),
-            "day": (date(2022, 12, 31) - date.today()).days}
+            "day": (datetime.now()).strftime("%m/%d/%Y")}
     runs.append(run)
     data = {"runs":runs}
     squidwrite(data)
